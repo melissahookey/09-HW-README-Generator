@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./generateMarkdown.js');
 const fs = require('fs');
 const util = require("util");
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -9,14 +9,9 @@ const writeFileAsync = util.promisify(fs.writeFile);
 function writeToFile(README, answers) {}
 
 // TODO: Create a function to initialize app
-function init() {
+function promptUser() {
     return inquirer
         .prompt([
-            {
-                type: 'input',
-                message: 'What is your GitHub username?',
-                name: 'username',
-            },
             {
                 type: 'input',
                 message: 'What is your project name?',
@@ -29,16 +24,6 @@ function init() {
             },
             {
                 type: 'input',
-                message: 'Why did you make this project?',
-                name: 'why',
-            },
-            {
-                type: 'input',
-                message: 'What did you learn from this project?',
-                name: 'learn',
-            },
-            {
-                type: 'input',
                 message: 'What are the steps required to install your project?',
                 name: 'installation',
             },
@@ -46,6 +31,11 @@ function init() {
                 type: 'input',
                 message: 'Provide instructions and examples for use.',
                 name: 'usage',
+            },
+            {
+                type: 'input',
+                message: 'List contributors: ',
+                name: 'contributors',
             },
             {
                 type: 'input',
@@ -67,17 +57,33 @@ function init() {
             },
             {
                 type: 'input',
-                message: 'List contributors: ',
-                name: 'contributors',
+                message: 'Are there any tests included?',
+                name: 'tests',
             },
+            {
+                type: 'input',
+                message: 'What do I do if I have a question or issue?',
+                name: 'questions',
+            },
+            {
+                type: 'input',
+                message: 'What is your GitHub username?',
+                name: 'username',
+            },
+            {
+                type: 'input',
+                message: 'What is your email?',
+                name: 'email',
+            },
+            
     ]);
 }        
     //   call write to file here
 async function init() {
     try {
             // Ask user questions and generate responses
-        const answers = await init();
-        const generateContent = generateReadme(answers);
+        const answers = await promptUser();
+        const generateContent = generateMarkdown(answers);
             // Write new README.md to dist directory
         await writeFileAsync('./dist/README.md', generateContent);
         console.log('✔️  Successfully wrote to README.md');

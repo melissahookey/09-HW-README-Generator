@@ -14,20 +14,20 @@ function renderLicenseSection(license) {}
 function generateMarkdown(answers) {
   return ` 
   
-  
   <h1>${answers.projectname}</h1>
+  ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
 
   ## Description
   ${answers.description}
-  ${why}
-  ${learn}
 
   ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#lincense)
-  - [Credits](#credits)
+  - [Contributing](#credits)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Installation
   ${answers.installation}
@@ -36,11 +36,22 @@ function generateMarkdown(answers) {
   ${answers.usage}
 
   ## License
+  ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
+  <br>
   ${answers.license}
 
-  ## Credits
-  ${username}
-  ${contributors}
+  ## Contributing
+  ${answers.contributors}
+
+  ## Tests
+  ${answers.tests}
+
+  ## Questions
+  ${answers.questions}
+  <br>
+  Find me on GitHub: [${answers.username}](https://github.com/${answers.username})
+  <br>
+  Email me with any questions: ${answers.email}
 `;
 }
 
