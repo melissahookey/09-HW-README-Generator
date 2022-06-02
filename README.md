@@ -1,7 +1,5 @@
- 
-  
-  <h1>ReadMe Generator</h1>
-   ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
+# README Generator
+  ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 
   ## Description
   This is a ReadMe Generator
@@ -19,12 +17,12 @@
   You must install inquirer
 
   ## Usage
-  You can use this to make a ReadMe
+  You can use this sweet ReadMe Generator to easily and quickly make a ReadMe file for your next project!
 
   ## License
   ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
   <br>
-  MIT
+  MIT License - A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
   ## Contributing
   No other contributors
@@ -38,3 +36,4 @@
   Find me on GitHub: [melissahookey](https://github.com/melissahookey)
   <br>
   Email me with any questions: melissah315@gmail.com
+
