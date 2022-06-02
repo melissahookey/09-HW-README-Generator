@@ -1,7 +1,7 @@
  
   
   <h1>ReadMe Generator</h1>
-  ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
+   ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 
   ## Description
   This is a ReadMe Generator
